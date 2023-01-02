@@ -2,10 +2,19 @@
 
     <mat-drawer mode="side" opened class="p-6">
         <div>
-            Filters
+          <app-filters (showCategory)="onShowCategory($event)"></app-filters>
         </div>
     </mat-drawer>
     <mat-drawer-container class="p-6">
+        <app-products-header (columsCountChange)="columsCountChange($event)"></app-products-header>
+      <mat-grid-list 
+      gutterSize="16"
+      [cols]="cols"
+      [rowHeight]="rowHeight"
+      >
+      <mat-grid-tile>
 
+      </mat-grid-tile>
+      </mat-grid-list>
     </mat-drawer-container>
 </mat-drawer-container>
